@@ -74,24 +74,25 @@ public class pattern {
         
     }
     public static void printDimond() {
-        int number = 5;
-        for (int row = 1; row <= number; row++) {
-            for (int col = 1; col <= number; col++) {
-                if(col > 5 - row && col < 1 + row){
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
+        int number = 7;
+         for(int row = 0; row < number; row++){
+            for(int c1 = 0; c1 < number - row - 1; c1++){
+                System.out.print(" ");
             }
-             for (int col = 1; col <= number; col++) {
-                if(col >= 1 + row && col <= 5 - row){
-                    System.out.print("*");
-                }else{
-                    System.out.print(" ");
-                }
-            }
+            for(int c2 = 0; c2 < row * 2 + 1; c2++){
+                System.out.print("*");
+            } 
             System.out.println();
-        } 
+        }
+        for(int row = number - 2 ; row >= 0; row--){
+            for(int c1 = 0; c1 < number - row - 1; c1++){
+                System.out.print(" ");
+            }
+            for(int c2 = 0; c2 < row * 2 + 1; c2++){
+                System.out.print("*");
+            } 
+            System.out.println();
+        }
         
     }
     // public static void printPattern() {
